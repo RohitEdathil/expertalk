@@ -9,3 +9,5 @@ Created for HACK101 hackathon conducted by IEDC, GECBH
 - [Demo Video](https://drive.google.com/file/d/1H6FIWGhNnokrgtmuiY3zIAqWOSsNE7V1/view?usp=drivesdk)
 
 # Screenshots
+
+- []
