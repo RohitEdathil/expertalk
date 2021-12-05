@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expertalk/components/wide_button/wide_button.dart';
 import 'package:expertalk/expert_or_participant/expert_or_participant.dart';
 import 'package:expertalk/home/home_screen.dart';
@@ -26,14 +27,43 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() => loading = true);
     final auth = FirebaseAuth.instance;
     try {
-      await auth.signInWithEmailAndPassword(
+      final user = await auth.signInWithEmailAndPassword(
           email: _emailController.value.text.trim(),
           password: _passwordController.value.text);
-      Navigator.of(context).pushAndRemoveUntil(
-        PageTransition(
-            child: const HomeScreen(), type: PageTransitionType.bottomToTop),
-        (route) => false,
-      );
+      final db = FirebaseFirestore.instance;
+      db.collection("users").doc(user.user!.uid).get().then((userData) async {
+        final userRole = userData["role"];
+        final roleAccess = widget.role == Role.expert
+            ? ((userRole == "expert") ? true : false)
+            : ((userRole == "participant") ? true : false);
+        if (!roleAccess) {
+          auth.signOut();
+          setState(() {
+            loading = false;
+            error = "You can't login in this role.";
+          });
+          return;
+        }
+        if (widget.role == Role.participant) {
+          final String userHackathon = userData["hackathon"];
+          final bool isLive = (await db
+              .collection("hackathons")
+              .doc(userHackathon)
+              .get())["live"];
+          if (!isLive) {
+            setState(() {
+              loading = false;
+              error = "Your event isn't live now.";
+            });
+            return;
+          }
+        }
+        Navigator.of(context).pushAndRemoveUntil(
+          PageTransition(
+              child: const HomeScreen(), type: PageTransitionType.bottomToTop),
+          (route) => false,
+        );
+      });
     } on FirebaseAuthException catch (e) {
       var m = e.message;
       if (m == "Given String is empty or null") {
