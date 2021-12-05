@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389201696770",
+    "firebase_url": "https://expertalk-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "expertalk-app",
+    "storage_bucket": "expertalk-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389201696770:android:602fc670d7788f8eb2af1b",
+        "android_client_info": {
+          "package_name": "com.hackathon.expertalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389201696770-4312e39d90pb57fd885t95ijn14tm5pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYijSMgDvwxcz--sTIr-dKSGuhLCO8UXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389201696770-4312e39d90pb57fd885t95ijn14tm5pn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
