@@ -9,11 +9,8 @@ Created for HACK101 hackathon conducted by IEDC, GECBH
 - [Demo Video](https://drive.google.com/file/d/1H6FIWGhNnokrgtmuiY3zIAqWOSsNE7V1/view?usp=drivesdk)
 
 # Screenshots
+<img src="img/1.jpg" style="width:200px"> <img src="img/2.jpg" style="width:200px"> <img src="img/3.jpg" style="width:200px">
+<img src="img/4.jpg" style="width:200px"> <img src="img/5.jpg" style="width:200px"> <img src="img/6.jpg" style="width:200px">
+<img src="img/7.jpg" style="width:200px">
 
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/1.jpg?raw=true)
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/2.jpg?raw=true)
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/3.jpg?raw=true)
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/4.jpg?raw=true)
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/5.jpg?raw=true)
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/6.jpg?raw=true)
-![Image](https://github.com/RohitEdathil/expertalk/blob/master/img/7.jpg?raw=true)
+
